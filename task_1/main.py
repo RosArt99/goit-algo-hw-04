@@ -2,7 +2,6 @@ from pathlib import Path
 from get_salary_num import get_salary_number
 def total_salary(path: str) -> tuple:
     try:
-        path = Path(path)
         with open(path,"r", encoding="utf-8") as file:
             salaries = file.readlines()
             numbers_only = get_salary_number(salaries)

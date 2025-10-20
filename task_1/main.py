@@ -9,7 +9,6 @@ def total_salary(path: str) -> tuple:
             avg_salary = float(sum_salary/len(numbers_only))
             return sum_salary, avg_salary
                 
-    
     except FileNotFoundError:
         return "File is not found :("
 

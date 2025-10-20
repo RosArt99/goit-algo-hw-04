@@ -5,9 +5,9 @@ def total_salary(path: str) -> tuple:
         with open(path,"r", encoding="utf-8") as file:
             salaries = file.readlines()
             numbers_only = get_salary_number(salaries)
-            sum_salary = int(sum(numbers_only))
+            sum_salary = float(sum(numbers_only))
             avg_salary = float(sum_salary/len(numbers_only))
-            return f"General salary sum is {sum_salary}.\nAverage salary is {avg_salary:.2f}."
+            return sum_salary, avg_salary
                 
     
     except FileNotFoundError:
